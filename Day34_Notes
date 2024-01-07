@@ -1,0 +1,33 @@
+# Day 34
+
+## Day 34 Goals:
+
+This day will be review and using the open trivia database to create a trivia question app.
+The building of the app will be what we use to conduct our review.
+
+## Trivia Question API Challenge:
+
+Just edited the program to make an API call to get 10 random questions instead of the hardcoded 10 originally used.
+
+## Solution & Walkthrough for getting Trivia Questions:
+
+Just a walkthrough of the solution to the previous sections challenge.
+However, have noticed that certain punctuation has been encoded in a strange manner that impacts the look and user friendliness of the app negatively.
+
+## Unescaping HTML Entities:
+
+As previously mentioned, when getting the data back from the API and displaying it, certain punctuation marks are coming out with an unusual formatting:
+    Instead of "'", "&#039;" is being displayed, which is bad for the experience of using the app.
+What we're seeing here is referred to as an HTML entity, and they're a way of replacing certain characters in HTML so that it doesn't mistake them for HTML code.
+What we need to do to fix this in called 'unescaping' these HTML entities.
+To do this, we'd have to first import the html library, and then run the .unescape method while passing it the string that we'd want to unescape:
+-"import html
+print(html.unescape('escaped text...'))
+"
+
+## Class based Tkinter UI:
+
+Point of this section is to upgrade the program to use a GUI instead of the terminal for its interaction.
+Going to be doing it slightly different to normal, will still be using tkinter, but will be doing so inside of a class.
+Essentially, in doing this, all UI objects we create using tkinter will be done as a object beloning to the class itself.
+While creating the UI, we'll comment out the while loop that runs the asking of questions functionality, so the program effectively only creates the UI, then completes running.

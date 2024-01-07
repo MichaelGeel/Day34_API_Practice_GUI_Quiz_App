@@ -1,6 +1,6 @@
 import requests as r
 
-
+ 
 PARAMETERS = {
     "amount": 10,
     "type": "boolean"
